@@ -5,10 +5,11 @@
 using namespace std;
 using namespace __gnu_pbds;
 
+template <typename T>
 using ordered_set = tree<
-    int,
+    T,
     null_type,
-    less<int>,
+    less<T>,
     rb_tree_tag,
     tree_order_statistics_node_update>;
 
@@ -16,7 +17,9 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    ordered_set Set;
+    
+    ordered_set<int> Set;
+
     int n, k;
     cin >> n >> k;
 
