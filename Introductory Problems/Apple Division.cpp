@@ -18,10 +18,10 @@ int main()
     }
 
     long long diff = LLONG_MAX;
-    for (int i=0; i<(1 << n); i++)
+    for (int i = 0; i < (1 << n); i++)
     {
         long long a = 0, b = 0;
-        for (int j=0; j<n; j++)
+        for (int j = 0; j < n; j++)
         {
             if ((i >> j) & 1)
             {

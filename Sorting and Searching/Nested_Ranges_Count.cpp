@@ -39,21 +39,21 @@ int main()
         arr.push_back({a, b, i});
     }
 
-    sort(arr.begin(), arr.end(), [](array<int, 3> &a, array<int, 3> &b) {
+    sort(arr.begin(), arr.end(), [](array<int, 3> &a, array<int, 3> &b)
+         {
         if (a[0] == b[0])
         {
             return a[1] > b[1];
         }
-        return a[0] < b[0]; 
-    });
-    
-    ordered_set<pair<int,int>> mns, mxs;
-    mns.insert({arr[n-1][1], arr[n-1][2]});
-    for (int i=n-2; i>=0; i--)
+        return a[0] < b[0]; });
+
+    ordered_set<pair<int, int>> mns, mxs;
+    mns.insert({arr[n - 1][1], arr[n - 1][2]});
+    for (int i = n - 2; i >= 0; i--)
     {
         // for (auto [a, b]: mns) cout << a << " "; cout << endl;
         // cout << i << " " <<arr[i][1] << " " << mns.order_of_key({arr[i][1], INT_MAX}) << endl;
-        v1[arr[i][2]] =  mns.order_of_key({arr[i][1], INT_MAX});
+        v1[arr[i][2]] = mns.order_of_key({arr[i][1], INT_MAX});
         mns.insert({arr[i][1], arr[i][2]});
     }
 

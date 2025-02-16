@@ -15,7 +15,8 @@ int main()
     {
         ret += n / i;
     }
-    cout << ret << endl;
     
+    cout << ret << endl;
+
     return 0;
 }

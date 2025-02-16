@@ -16,11 +16,11 @@ int main()
         cin >> a >> b;
         arr.push_back({a, b});
     }
-    
+
     sort(arr.begin(), arr.end());
 
     long long ret = 0, cur = 0;
-    for (auto [a, b]: arr)
+    for (auto [a, b] : arr)
     {
         cur += a;
         ret += b - cur;

@@ -24,7 +24,8 @@ int main()
 
     solve(n, 1, 3, 2);
     cout << rets.size() << endl;
-    for (auto step: rets)
+    
+    for (auto step : rets)
     {
         cout << step << endl;
     }

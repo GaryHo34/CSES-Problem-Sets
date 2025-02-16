@@ -10,8 +10,8 @@ int main()
     int n;
     cin >> n;
 
-    vector<array<int,3>> arr;
-    for (int i=0; i<n; i++)
+    vector<array<int, 3>> arr;
+    for (int i = 0; i < n; i++)
     {
         int a, b;
         cin >> a >> b;
@@ -19,18 +19,18 @@ int main()
     }
     vector<int> rets(n);
     sort(arr.begin(), arr.end());
-    
+
     int mx = 0;
     queue<int> q;
-    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<>> pq; // end, room;
-    for (auto [start, end, idx]: arr)
-    {   
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq; // end, room;
+    for (auto [start, end, idx] : arr)
+    {
         while (!pq.empty() && pq.top().first < start)
         {
             q.push(pq.top().second);
             pq.pop();
         }
-        if (q.empty()) 
+        if (q.empty())
         {
             mx++;
             rets[idx] = mx;
@@ -45,7 +45,7 @@ int main()
     }
 
     cout << mx << endl;
-    for (auto x: rets)
+    for (auto x : rets)
     {
         cout << x << " ";
     }

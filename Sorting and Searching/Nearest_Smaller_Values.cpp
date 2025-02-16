@@ -11,10 +11,10 @@ int main()
     cin >> n;
     stack<int> st;
     vector<int> arr(n + 1);
-    
+
     st.push(0);
     arr[0] = INT_MIN;
-    
+
     for (int i = 1; i <= n; i++)
     {
         cin >> arr[i];
@@ -22,7 +22,7 @@ int main()
         {
             st.pop();
         }
-        cout << st.top() << (" \n")[i==n];
+        cout << st.top() << (" \n")[i == n];
         st.push(i);
     }
     return 0;

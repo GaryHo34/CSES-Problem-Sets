@@ -28,16 +28,16 @@ int main()
         arr.push_back({a, b, i});
     }
 
-    sort(arr.begin(), arr.end(), [](array<int, 3> &a, array<int, 3> &b) {
+    sort(arr.begin(), arr.end(), [](array<int, 3> &a, array<int, 3> &b)
+         {
         if (a[0] == b[0])
         {
             return a[1] > b[1];
         }
-        return a[0] < b[0]; 
-    });
-    
-    int mn = arr[n-1][1];
-    for (int i=n-2; i>=0; i--)
+        return a[0] < b[0]; });
+
+    int mn = arr[n - 1][1];
+    for (int i = n - 2; i >= 0; i--)
     {
         if (arr[i][1] >= mn)
         {
